@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a0f18">
+  <meta name="description" content="BO3対応・再戦回避型のブラウザ完結Swiss Draw対戦管理アプリ">
+  <title>Swiss Draw Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">BO3 TOURNAMENT TOOL</p>
+      <h1 id="header-title">Swiss Draw Manager</h1>
+    </div>
+    <div id="round-badge" class="round-badge" hidden></div>
+  </header>
+
+  <main id="app" class="app-shell" aria-live="polite"></main>
+
+  <nav id="bottom-nav" class="bottom-nav" aria-label="大会メニュー" hidden>
+    <button data-tab="matches" aria-label="対戦"><span>対戦</span></button>
+    <button data-tab="standings" aria-label="順位"><span>順位</span></button>
+    <button data-tab="players" aria-label="プレイヤー"><span>参加者</span></button>
+    <button data-tab="history" aria-label="履歴"><span>履歴</span></button>
+    <button data-tab="settings" aria-label="設定"><span>設定</span></button>
+  </nav>
+
+  <dialog id="modal" class="modal"><div id="modal-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <script src="app.js"></script>
+</body>
+</html>
